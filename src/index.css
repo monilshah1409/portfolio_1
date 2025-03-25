@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: white; /* Set background to white */
+}
+
+.welcome-container {
+  background-color: white; /* Ensure the container is white */
+  border-radius: 15px; /* Rounded edges */
+  color: navy; /* Text color navy blue */
+  padding: 20px; /* Add some padding */
+}
