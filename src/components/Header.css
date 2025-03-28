@@ -1,0 +1,232 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(17, 34, 64, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+.logo i {
+  font-size: 2rem;
+  color: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.logo:hover i {
+  transform: rotate(360deg);
+}
+
+.logo h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: 0.8px;
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+.menu-icon {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.8rem;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  display: none;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 255, 218, 0.1);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.menu-icon:hover::before {
+  transform: scale(1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-links li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--accent-color);
+}
+
+.nav-links li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: rgba(17, 34, 64, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 5rem 2rem 2rem;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links.active {
+    right: 0;
+    animation: slideIn 0.3s ease forwards;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+    display: block;
+    padding: 1rem 0;
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeInRight 0.3s ease forwards;
+  }
+
+  .nav-links li:nth-child(1) a { animation-delay: 0.1s; }
+  .nav-links li:nth-child(2) a { animation-delay: 0.2s; }
+  .nav-links li:nth-child(3) a { animation-delay: 0.3s; }
+  .nav-links li:nth-child(4) a { animation-delay: 0.4s; }
+  .nav-links li:nth-child(5) a { animation-delay: 0.5s; }
+  .nav-links li:nth-child(6) a { animation-delay: 0.6s; }
+  .nav-links li:nth-child(7) a { animation-delay: 0.7s; }
+}
+
+@keyframes slideIn {
+  from { right: -100%; }
+  to { right: 0; }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+
+  .logo h1 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.6px;
+    text-shadow: 0 0 8px rgba(100, 255, 218, 0.3);
+  }
+
+  .logo i {
+    font-size: 1.8rem;
+  }
+
+  .menu-icon {
+    font-size: 1.6rem;
+    padding: 0.6rem;
+  }
+
+  .nav-links {
+    width: 280px;
+  }
+} 

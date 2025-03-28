@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Header.css';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +26,7 @@ const Header = () => {
 
             <nav>
                 <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-                    {/* <li><Link to="/" onClick={closeMenu}>Home</Link></li> */}
+                    <li><Link to="/" onClick={closeMenu}>Home</Link></li>
                     <li><Link to="/about" onClick={closeMenu}>About</Link></li>
                     <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>
                     <li><Link to="/skills" onClick={closeMenu}>Skills</Link></li>
