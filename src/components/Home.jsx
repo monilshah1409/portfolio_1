@@ -125,27 +125,27 @@ const Home = forwardRef((props, ref) => {
                 <div className="tech-icons">
                   <div className="tech-item">
                     <div className="tech-icon-wrapper">
-                      <i className="fab fa-python"></i>
+                      <i className="fas fa-chart-line"></i>
                     </div>
-                    <span className="tech-label">Python</span>
+                    <span className="tech-label">Data & Analytics</span>
                   </div>
                   <div className="tech-item">
                     <div className="tech-icon-wrapper">
-                      <i className="fab fa-js"></i>
+                      <i className="fas fa-code"></i>
                     </div>
-                    <span className="tech-label">JavaScript</span>
+                    <span className="tech-label">Programming & Development</span>
                   </div>
                   <div className="tech-item">
                     <div className="tech-icon-wrapper">
-                      <i className="fab fa-react"></i>
+                      <i className="fas fa-cloud"></i>
                     </div>
-                    <span className="tech-label">React</span>
+                    <span className="tech-label">Cloud & Infrastructure</span>
                   </div>
                   <div className="tech-item">
                     <div className="tech-icon-wrapper">
-                      <i className="fab fa-node-js"></i>
+                      <i className="fas fa-robot"></i>
                     </div>
-                    <span className="tech-label">Node.js</span>
+                    <span className="tech-label">AI & Machine Learning</span>
                   </div>
                   <div className="tech-item">
                     <div className="tech-icon-wrapper">
@@ -155,9 +155,9 @@ const Home = forwardRef((props, ref) => {
                   </div>
                   <div className="tech-item">
                     <div className="tech-icon-wrapper">
-                      <i className="fab fa-aws"></i>
+                      <i className="fas fa-briefcase"></i>
                     </div>
-                    <span className="tech-label">AWS</span>
+                    <span className="tech-label">Business & Project Management</span>
                   </div>
                 </div>
               </div>

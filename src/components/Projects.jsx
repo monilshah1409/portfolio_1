@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Projects.css';
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const projects = [
     {
       title: 'Consumer Purchasing Behavior Analysis',
@@ -35,17 +37,44 @@ const Projects = () => {
     },
   ];
 
+  const handleProjectClick = (project) => {
+    if (window.innerWidth <= 480) {
+      setSelectedProject(project);
+    }
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <div className="projects-container">
       <div className="projects-content-box">
         <h1>Projects</h1>
         {projects.map((project, index) => (
-          <div key={index} className="project-card">
+          <div 
+            key={index} 
+            className="project-card"
+            onClick={() => handleProjectClick(project)}
+          >
             <h2>{project.title}</h2>
             <p>{project.description}</p>
           </div>
         ))}
       </div>
+
+      {/* Modal for mobile view */}
+      {selectedProject && (
+        <div className="project-modal" onClick={closeModal}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <h2>{selectedProject.title}</h2>
+            <p>{selectedProject.description}</p>
+            <button className="close-modal" onClick={closeModal}>
+              <i className="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

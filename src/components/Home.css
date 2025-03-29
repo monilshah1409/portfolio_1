@@ -213,7 +213,8 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(100, 255, 218, 0.2);
   transition: all 0.4s ease;
-  max-width: 400px;
+  width: 100%;
+  max-width: 480px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -234,16 +235,16 @@
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
-  margin-bottom: 1.5rem;
+  gap: 2rem;
+  margin-bottom: 1.2rem;
 }
 
 .social-icon {
   color: var(--text-secondary);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   transition: all 0.3s ease;
   position: relative;
-  padding: 0.8rem;
+  padding: 0.6rem;
   border-radius: 50%;
   background: rgba(100, 255, 218, 0.1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -262,17 +263,13 @@
 .quick-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.8rem;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: rgba(100, 255, 218, 0.05);
-  border-radius: 20px;
-  border: 1px solid rgba(100, 255, 218, 0.1);
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
 .stat {
   text-align: center;
-  padding: 0.8rem;
+  padding: 0.6rem;
   background: rgba(100, 255, 218, 0.1);
   border-radius: 16px;
   transition: all 0.3s ease;
@@ -281,7 +278,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 80px;
+  min-height: 70px;
 }
 
 .stat:hover {
@@ -292,17 +289,17 @@
 }
 
 .stat i {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--accent-color);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .stat-number {
   display: block;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: var(--text-secondary);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -317,16 +314,17 @@
 
 /* Tech Stack */
 .tech-stack {
-  padding: 1.2rem;
+  padding: 1rem;
   background: rgba(100, 255, 218, 0.05);
   border-radius: 20px;
   border: 1px solid rgba(100, 255, 218, 0.1);
+  margin-top: 1rem;
 }
 
 .tech-stack h3 {
   color: var(--text-secondary);
   font-size: 1.3rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   text-align: center;
   position: relative;
   padding-bottom: 0.6rem;
@@ -338,18 +336,16 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.8rem;
+  padding: 0.3rem;
 }
 
 .tech-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
+  background: rgba(17, 34, 64, 0.8);
+  border-radius: 12px;
   padding: 0.8rem;
-  background: rgba(100, 255, 218, 0.1);
-  border-radius: 16px;
+  text-align: center;
+  border: 1px solid rgba(100, 255, 218, 0.1);
   transition: all 0.3s ease;
-  border: 1px solid rgba(100, 255, 218, 0.2);
 }
 
 .tech-item:hover {
@@ -360,8 +356,8 @@
 }
 
 .tech-icon-wrapper {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -375,7 +371,7 @@
 }
 
 .tech-icon-wrapper i {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #fff;
   transition: all 0.3s ease;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -395,7 +391,7 @@
 }
 
 .tech-label {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #fff;
   text-align: center;
   transition: all 0.3s ease;
@@ -490,41 +486,18 @@
   }
 
   .profile-card {
-    max-width: 380px;
+    max-width: 400px;
   }
 }
 
-@media (max-width: 1024px) {
-  .split-layout {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 2rem;
-    padding-top: 1rem;
-    align-items: center;
-  }
-
-  .left-section, .right-section {
-    padding: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .name {
-    font-size: 4.5rem;
-  }
-
-  .role {
-    font-size: 2rem;
-  }
-  
-  .description {
-    font-size: 1.3rem;
-  }
-  
+@media (max-width: 992px) {
   .profile-card {
-    max-width: 360px;
-    margin: 0 auto;
+    max-width: 380px;
+    padding: 1.5rem;
+  }
+
+  .tech-icons {
+    gap: 1rem;
   }
 }
 
@@ -537,6 +510,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 1rem;
+    gap: 2rem;
   }
 
   .left-section {
@@ -556,32 +530,34 @@
   }
   
   .profile-card {
-    max-width: 340px;
-    padding: 1.8rem;
-    margin: 0 auto;
+    max-width: 520px;
+    padding: 1.5rem;
   }
   
   .name {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
   
   .role {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   
   .description {
-    font-size: 1.2rem;
-    margin: 0 auto 2rem;
+    font-size: 1.3rem;
+  }
+
+  .tech-icons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tech-item {
+    padding: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .home-container {
-    padding: 1rem;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 4rem 1rem 1.5rem;
   }
   
   .split-layout {
@@ -617,55 +593,49 @@
   }
   
   .profile-card {
-    max-width: 320px;
-    padding: 1.5rem;
-    margin: 0 auto;
+    max-width: 100%;
+    padding: 1.2rem;
+    margin: 0 0.5rem;
   }
   
   .tech-icons {
-    gap: 0.8rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+  }
+  
+  .tech-stack h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
   }
   
   .tech-item {
-    padding: 0.8rem;
-  }
-  
-  .tech-icon-wrapper {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .tech-icon-wrapper i {
-    font-size: 1.3rem;
-  }
-  
-  .tech-label {
-    font-size: 0.8rem;
+    padding: 0.6rem;
   }
 
-  .stat {
-    padding: 0.8rem;
-    min-height: 75px;
-  }
-
-  .stat i {
-    font-size: 1.3rem;
-  }
-
-  .stat-number {
-    font-size: 1.6rem;
-  }
-
-  .stat-label {
-    font-size: 0.8rem;
+  .quick-stats {
+    gap: 1rem;
   }
 
   .social-links {
     gap: 1rem;
+    margin-bottom: 1rem;
   }
 
   .social-icon {
     font-size: 1.4rem;
     padding: 0.7rem;
+  }
+
+  .tech-icon-wrapper {
+    width: 35px;
+    height: 35px;
+  }
+
+  .tech-icon-wrapper i {
+    font-size: 1.2rem;
+  }
+
+  .tech-label {
+    font-size: 0.8rem;
   }
 }
