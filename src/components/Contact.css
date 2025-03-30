@@ -2,6 +2,7 @@
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  overflow-x: hidden; /* Add this to prevent horizontal scroll */
 }
 
 .contact-content-box {
@@ -395,5 +396,49 @@
 
   .contact-info-content p {
     font-size: 0.9rem;
+  }
+}
+
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 120px;
+  max-height: 300px;
+  resize: vertical;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .contact-content-box {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    margin: 0;
+  }
+
+  .form-group textarea {
+    width: 100%;
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group textarea {
+    width: 100%;
+    min-height: 80px;
+    font-size: 0.9rem;
+    padding: 0.7rem;
   }
 }
