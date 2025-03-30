@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Projects.css';
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [expandedProject, setExpandedProject] = useState(null);
 
   const projects = [
     {
@@ -37,14 +37,8 @@ const Projects = () => {
     },
   ];
 
-  const handleProjectClick = (project) => {
-    if (window.innerWidth <= 480) {
-      setSelectedProject(project);
-    }
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
+  const toggleProject = (index) => {
+    setExpandedProject(expandedProject === index ? null : index);
   };
 
   return (
@@ -52,29 +46,19 @@ const Projects = () => {
       <div className="projects-content-box">
         <h1>Projects</h1>
         {projects.map((project, index) => (
-          <div 
-            key={index} 
-            className="project-card"
-            onClick={() => handleProjectClick(project)}
-          >
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
+          <div key={index} className="project-card">
+            <div className="project-header" onClick={() => toggleProject(index)}>
+              <h2>{project.title}</h2>
+              <button className="expand-button">
+                <i className={`fas ${expandedProject === index ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+              </button>
+            </div>
+            <div className={`project-description ${expandedProject === index ? 'active' : ''}`}>
+              <p>{project.description}</p>
+            </div>
           </div>
         ))}
       </div>
-
-      {/* Modal for mobile view */}
-      {selectedProject && (
-        <div className="project-modal" onClick={closeModal}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <h2>{selectedProject.title}</h2>
-            <p>{selectedProject.description}</p>
-            <button className="close-modal" onClick={closeModal}>
-              <i className="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

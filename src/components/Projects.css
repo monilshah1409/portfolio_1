@@ -38,39 +38,65 @@
   margin-bottom: 1.5rem;
   border: 1px solid rgba(100, 255, 218, 0.2);
   transition: all 0.3s ease;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  border-color: var(--accent-color);
-}
-
-.project-card h2 {
+.project-header h2 {
   color: var(--accent-color);
   font-size: 1.4rem;
-  margin-bottom: 1rem;
+  margin: 0;
   position: relative;
   padding-left: 1.5rem;
 }
 
-.project-card h2::before {
+.project-header h2::before {
   content: '▹';
   position: absolute;
   left: 0;
   color: var(--accent-color);
 }
 
-.project-card p {
+.expand-button {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.project-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  opacity: 0;
+}
+
+.project-description.active {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.project-description p {
   color: var(--text-muted);
   font-size: 1.1rem;
   line-height: 1.6;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
   .projects-container {
-    padding: 5rem 1.5rem 2rem;
+    padding: 5rem 1rem 2rem;
   }
 
   .projects-content-box h1 {
@@ -79,40 +105,42 @@
 
   .project-card {
     padding: 1.2rem;
+    margin-bottom: 1rem;
   }
 
-  .project-card h2 {
+  .project-header h2 {
     font-size: 1.2rem;
+  }
+
+  .project-description p {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .projects-container {
-    padding: 4rem 1rem 1.5rem;
+    padding: 4rem 0.8rem 1.5rem;
   }
 
   .projects-content-box h1 {
     font-size: 1.8rem;
-    margin-bottom: 1.5rem;
   }
 
   .project-card {
     padding: 1rem;
-    margin-bottom: 1rem;
   }
 
-  .project-card h2 {
+  .project-header h2 {
     font-size: 1.1rem;
-    margin-bottom: 0;
     padding-left: 1.2rem;
   }
 
-  .project-card p {
-    display: none;
+  .expand-button {
+    font-size: 1rem;
   }
 
-  .project-card:hover {
-    transform: translateY(-3px);
+  .project-description p {
+    font-size: 0.95rem;
   }
 }
 

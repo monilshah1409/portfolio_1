@@ -1,0 +1,158 @@
+/* Common Mobile Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 4rem 1rem 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  /* Card Styles */
+  .card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+  }
+
+  /* Grid Layouts */
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* List Items */
+  .list-item {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Buttons */
+  .button {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Form Elements */
+  input, textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  /* Icons */
+  .icon {
+    font-size: 1.2rem;
+  }
+
+  /* Spacing */
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  /* Navigation */
+  .nav-links {
+    padding: 1rem;
+  }
+
+  /* Tables */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 3rem 0.8rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  /* Card Styles */
+  .card {
+    padding: 0.8rem;
+  }
+
+  /* Grid Layouts */
+  .grid-2, .grid-3 {
+    gap: 0.8rem;
+  }
+
+  /* List Items */
+  .list-item {
+    padding: 0.6rem;
+  }
+
+  /* Buttons */
+  .button {
+    padding: 0.7rem 1.2rem;
+  }
+
+  /* Form Elements */
+  input, textarea {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  /* Icons */
+  .icon {
+    font-size: 1.1rem;
+  }
+
+  /* Spacing */
+  .section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Hide Less Important Content on Mobile */
+@media (max-width: 768px) {
+  .secondary-content {
+    display: none;
+  }
+
+  .expandable-content {
+    display: none;
+  }
+
+  .expandable-content.active {
+    display: block;
+  }
+
+  .expand-button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    background: rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    border-radius: 8px;
+    color: var(--accent-color);
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+} 
