@@ -1,5 +1,15 @@
 export const certifications = [
     {
+        id: 20,
+        title: "Artificial Intelligence and Machine Learning Program (ICTRD)",
+        issuer: "Indian Council for Technical Research and Development",
+        date: "April 2025",
+        description: "Artificial Intelligence and Machine Learning Program, Indian Council for Technical Research and Development (ICTRD): Developed skills in AI/ML principles and applications.",
+        skills: ["Machine Learning", "Artificial Intelligence"],
+        credentialId: "DI/C/25004162",
+        icon: "fas fa-robot"
+    },
+    {
         id: 1,
         title: "Quantium - Data Analytics Job Simulation",
         issuer: "Forage",
@@ -188,7 +198,5 @@ export const certifications = [
         skills: ["Machine Learning", "Machine Learning Technology", "Machine Learning Applications"],
         credentialId: null,
         icon: "fas fa-cogs"
-    },
-    
-    
-]; 
+    }
+];
