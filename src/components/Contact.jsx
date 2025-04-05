@@ -117,8 +117,7 @@ const Contact = () => {
               <a href="https://github.com/monilshah1409" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github"></i>
               </a>
-              <a href="www.linkedin.com/in/monil-shah-943a10258" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-linkedin"></i>
+              <a href="https://www.linkedin.com/in/monil-shah-943a10258/. " target="_blank" rel="noopener noreferrer">                <i className="fab fa-linkedin"></i>
               </a>
             </div>
           </div>
