@@ -1,5 +1,16 @@
 export const certifications = [
     {
+        id: 21,
+        title: "Transform your business with Microsoft AI",
+        issuer: "Microsoft AI",
+        date: "April 2025",
+        description: "Certification in Microsoft AI, covering AI fundamentals and applications.",
+        skills: ["Artificial Intelligence", "Machine Learning", "Deep Learning", "Natural Language Processing", "Computer Vision"],
+        icon: "fas fa-brain"
+
+    },
+    
+    {
         id: 20,
         title: "Artificial Intelligence and Machine Learning Program (ICTRD)",
         issuer: "Indian Council for Technical Research and Development",

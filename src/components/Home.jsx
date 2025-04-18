@@ -109,12 +109,12 @@ const Home = forwardRef((props, ref) => {
               <div className="quick-stats">
                 <div className="stat">
                   <i className="fas fa-code-branch"></i>
-                  <span className="stat-number">10+</span>
+                  <span className="stat-number">5+</span>
                   <span className="stat-label">Projects</span>
                 </div>
                 <div className="stat">
                   <i className="fas fa-certificate"></i>
-                  <span className="stat-number">5+</span>
+                  <span className="stat-number">15+</span>
                   <span className="stat-label">Certifications</span>
                 </div>
               </div>
